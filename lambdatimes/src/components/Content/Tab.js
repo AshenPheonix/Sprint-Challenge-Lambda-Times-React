@@ -7,7 +7,7 @@ const Tab = props => {
       if it is not it should just be 'tab'*/
     let CN='tab'
     if(props.tab===props.selectedTab)
-      CN+=' activeTab'
+      CN+=' active-tab'
 
   return (
     <div
