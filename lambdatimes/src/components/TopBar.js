@@ -1,23 +1,35 @@
 import React from 'react';
+import {TBar, TopContainer, SubCont, 
+        TopSpan, TopSpanLeft,TopSpanCenter} from '../styled/TopBar'
 
 // Refactor this component to use styled components and not classNames. 
 // You can find the corresponding CSS in the CSS/index.css file
 
 const TopBar = () => {
   return (
-    <div className="top-bar">
-      <div className="container">
-        <div className="container-left">
-          <span>TOPICS</span><span>SEARCH</span>
-        </div>
-        <div className="container-center">
-          <span>GENERAL</span><span>BROWNBAG</span><span>RANDOM</span><span>MUSIC</span><span>ANNOUNCEMENTS</span>
-        </div>
-        <div className="container-right">
-          <span>LOG IN</span>
-        </div>
-      </div>
-    </div>
+    <TBar>
+      <TopContainer>
+        <SubCont
+          fsize='11px'
+        >
+          <TopSpanLeft>TOPICS</TopSpanLeft><TopSpanLeft>SEARCH</TopSpanLeft>
+        </SubCont>
+        <SubCont
+          dir='center'
+          size='3'
+
+        >
+          <TopSpanCenter>GENERAL</TopSpanCenter><TopSpanCenter>BROWNBAG</TopSpanCenter><TopSpanCenter>RANDOM</TopSpanCenter><TopSpanCenter>MUSIC</TopSpanCenter><TopSpanCenter>ANNOUNCEMENTS</TopSpanCenter>
+        </SubCont>
+        <SubCont
+          dir='space-between'
+          fsize='11px'
+          weight='bold'
+        >
+          <TopSpan>LOG IN</TopSpan>
+        </SubCont>
+      </TopContainer>
+    </TBar>
   )
 }
 
